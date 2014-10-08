@@ -54,6 +54,16 @@ def main():
     parser.add_argument("-s", "--stopci", help="Stop cloud-init service",
                         action="store_true")
     args = parser.parse_args()
+    # First let us give some warning to the user.
+    print "This will try to convert your Fedora cloud instance to a Fedora Server instance."
+    while True:
+        inp = raw_input("Continue? y/N: ")
+        inp = inp.strip()
+        if inp == 'N':
+            return
+        if inp.upper() == 'Y':
+            break
+    # Now the normal flow of the application
     convert_to_server()
     if args.stopci:
         print "Disabling cloud-init service on reboot."
