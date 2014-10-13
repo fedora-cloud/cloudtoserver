@@ -51,7 +51,7 @@ def main():
     Main function of the script.
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--stopci", help="Stop cloud-init service",
+    parser.add_argument("-d", "--disable-cloud-service", help="Disable cloud-init service",
                         action="store_true")
     args = parser.parse_args()
     # First let us give some warning to the user.
@@ -65,8 +65,8 @@ def main():
             break
     # Now the normal flow of the application
     convert_to_server()
-    if args.stopci:
-        print "Disabling cloud-init service on reboot."
+    if args.disable-cloud-service:
+        print "Disabling cloud-init service. This won't run anymore by default."
         cmd = "systemctl disable cloud-init.service"
         os.system(cmd)
 
