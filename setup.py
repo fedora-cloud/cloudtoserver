@@ -11,5 +11,5 @@ setup(name='cloudtoserver',
       author_email="kdas@redhat.com",
       url="https://github.com/fedora-cloud/cloudtoserver",
       license = "http://www.gnu.org/copyleft/gpl.html",
-      scripts = ['cloudtofedora']
+      scripts = ['cloudtoserver']
       )
