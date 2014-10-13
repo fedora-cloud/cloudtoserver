@@ -13,5 +13,6 @@ usage: cloudtoserver [-h] [-d]
 optional arguments:
     -h, --help    show this help message and exit
     -d, --disable-cloud-service Disable cloud-init service
+    -v, --version         Prints the version of the tool
 
 Remember to pass -d or --disable-cloud-service to disable cloud-init service by default.
