@@ -1,2 +1,2 @@
 include cloudtofedora
-include LICENSE README.rst
+include LICENSE README.rst cloudtoserver.8
