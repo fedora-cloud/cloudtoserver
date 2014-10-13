@@ -12,6 +12,6 @@ usage: cloudtoserver [-h] [-s]
 
 optional arguments:
   -h, --help    show this help message and exit
-  -s, --stopci  Stop cloud-init service
+  -d, --disable-cloud-service Disable cloud-init service
 
-Remember to pass -s or --stopci flag to disable cloud-init service from next reboot.
+Remember to pass -d or --disable-cloud-service to disable cloud-init service by default.
