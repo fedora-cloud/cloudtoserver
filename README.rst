@@ -1,8 +1,8 @@
 Cloud to Server
 ===============
 
-A small script which will convert your Fedora cloud instance into a Fedora Server instance.
-Currently it works Fedora 21 and above.
+A small script which will convert your Fedora cloud instance into a Fedora Server instance. It works on Fedora 21 and above.
+
 
 Usage
 ------
