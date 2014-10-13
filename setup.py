@@ -2,7 +2,7 @@
 """Setup script"""
 from setuptools import setup
 
-setup(name='cloudtofedora',
+setup(name='cloudtoserver',
       version='0.1',
       description="Converts Fedora Cloud instance to Fedora Server instance.",
       long_description = "Converts Fedora Cloud instance to Fedora Server instance.",
