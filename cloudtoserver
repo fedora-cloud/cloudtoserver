@@ -65,7 +65,7 @@ def main():
             break
     # Now the normal flow of the application
     convert_to_server()
-    if args.disable-cloud-service:
+    if args.disable_cloud_service:
         print "Disabling cloud-init service. This won't run anymore by default."
         cmd = "systemctl disable cloud-init.service"
         os.system(cmd)
