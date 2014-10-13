@@ -25,6 +25,7 @@ import os
 import sys
 import argparse
 
+VERSION = '0.1'
 
 def convert_to_server():
     """This function tries to run a series of yum commands
@@ -53,7 +54,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--disable-cloud-service", help="Disable cloud-init service",
                         action="store_true")
+    parser.add_argument("-v", "--version", help="Prints the version of the tool",
+                        action="store_true")
     args = parser.parse_args()
+
+    if args.version:
+        print 'cloudtoserver version %s' % VERSION
+        return
     # First let us give some warning to the user.
     print "This will try to convert your Fedora cloud instance to a Fedora Server instance."
     while True:
