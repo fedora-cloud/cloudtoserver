@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Copyright 2014  Red Hat, Inc.
+# Copyright 2014-2015  Red Hat, Inc.
 #
 # This copyrighted material is made available to anyone wishing to use,
 # modify, copy, or redistribute it subject to the terms and conditions
@@ -25,13 +25,13 @@ import os
 import sys
 import argparse
 
-VERSION = '0.1'
+VERSION = '0.2'
 
 def convert_to_server():
     """This function tries to run a series of yum commands
 to convert a Fedora cloud instance into a Fedora server instance.
     """
-    cmd = "yum -y swap -- install fedora-release-server firewalld-config-server -- remove fedora-release-cloud firewalld-config-standard"
+    cmd = "dnf -y remove fedora-release-cloud"
     ret_code = os.system(cmd)
     if ret_code != 0:
         print "There was issues while converting to Fedora Server. Please report the error"
@@ -40,7 +40,7 @@ to convert a Fedora cloud instance into a Fedora server instance.
 
     # Now we now that fedora-release server is in the system
     # We will try to pull down the rest of the packages. 
-    cmd = "yum install @^server-product-environment -y"
+    cmd = 'dnf groupinstall "Fedora Server" -y'
     ret_code = os.system(cmd)
     if ret_code != 0:
         print "Error while installing packages. Please check the network."
