@@ -8,11 +8,13 @@ Usage
 ------
 
 $ ./cloudtoserver --help
-usage: cloudtoserver [-h] [-d]
+usage: cloudtoserver [-h] [-d] [-v] [-y]
 
 optional arguments:
     -h, --help    show this help message and exit
-    -d, --disable-cloud-service Disable cloud-init service
+    -d, --disable-cloud-service
+                          Disable cloud-init service
     -v, --version         Prints the version of the tool
+    -y, --no-confirm      Do not prompt for confirmation
 
 Remember to pass -d or --disable-cloud-service to disable cloud-init service by default.
